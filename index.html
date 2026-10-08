@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TestSoft Lab — Native iOS Systems &amp; Application Engineering</title>
+  <meta name="description" content="TestSoft designs and engineers high-precision, privacy-first native software for Apple platforms. Powered by Swift 6, CoreAudio, Metal, and on-device Neural Engine.">
+  <meta name="theme-color" content="#07090e">
+  
+  <!-- Open Graph / Meta Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://testsoftlab.com/">
+  <meta property="og:title" content="TestSoft Lab — Native iOS Application Engineering">
+  <meta property="og:description" content="Precision instruments for iPhone and iPad. Hardware-calibrated performance, zero telemetry, no subscriptions.">
+  <meta property="og:image" content="assets/images/screenshot-plantlight.jpg">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/icon-plantlight.png">
+</head>
+<body>
+
+  <!-- Ambient Lighting Effects -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-mid"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">TestSoft<span class="brand-dot">Lab</span></span>
+          <span class="brand-sub">Apple Systems &amp; Apps</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#portfolio">Instruments</a>
+        <a href="#engineering">Architecture</a>
+        <a href="#flagship">Featured: Plant Light</a>
+        <a href="#standards">Quality &amp; Pipeline</a>
+        <a href="#contact">Contact</a>
+        <a href="support.html">Documentation</a>
+      </nav>
+
+      <div class="nav-action">
+        <a href="mailto:hayriodabas@testsoftlab.com" class="btn btn-sm btn-outline">
+          <span class="dot-live"></span>
+          <span>hayriodabas@testsoftlab.com</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <div class="badge-pill">
+          <span class="badge-indicator"></span>
+          <span>Apple Platform Software Studio · Swift 6 Native</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Precision Engineering for iOS.<br>
+          <span class="gradient-text">Hardware Calibrated. Zero Telemetry.</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          TestSoft architects high-fidelity, single-purpose software instruments for iPhone and iPad. Powered by native Swift, Metal, CoreAudio, and on-device neural silicon — designed without behavioral trackers, external cloud dependencies, or predatory recurring paywalls.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#portfolio" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Explore 16+ Instruments</span>
+          </a>
+          <a href="#engineering" class="btn btn-secondary">
+            <span>Engineering Architecture</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">16+</span>
+            <span class="stat-label">Production Apps</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">On-Device Compute</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Remote Trackers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">13</span>
+            <span class="stat-label">Native Locales</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Interactive Device Preview -->
+      <div class="hero-visual">
+        <div class="phone-frame-wrapper">
+          <div class="phone-frame">
+            <div class="phone-dynamic-island"></div>
+            <div class="phone-screen">
+              <img id="hero-screen-img" src="assets/images/screenshot-plantlight.jpg" alt="TestSoft Application Preview" class="screen-preview active">
+            </div>
+          </div>
+          <div class="device-reflection"></div>
+        </div>
+
+        <!-- Interactive Switcher -->
+        <div class="interactive-preview-chips">
+          <button class="preview-chip active" data-img="assets/images/screenshot-plantlight.jpg" data-name="Plant Light Meter" data-tag="Photometric Sensor">
+            <img src="assets/images/icon-plantlight.png" alt="" width="18" height="18">
+            <span>Plant Light</span>
+          </button>
+          <button class="preview-chip" data-img="assets/images/screenshot-linecast.jpg" data-name="Linecast Teleprompter" data-tag="Speech Recognition">
+            <img src="assets/images/icon-linecast.png" alt="" width="18" height="18">
+            <span>Linecast</span>
+          </button>
+          <button class="preview-chip" data-img="assets/images/screenshot-beatwise.jpg" data-name="Beatwise Metronome" data-tag="AVAudioEngine">
+            <img src="assets/images/icon-beatwise.png" alt="" width="18" height="18">
+            <span>Beatwise</span>
+          </button>
+          <button class="preview-chip" data-img="assets/images/screenshot-exposure.jpg" data-name="Exposure Meter" data-tag="Film Photometry">
+            <img src="assets/images/icon-exposure.png" alt="" width="18" height="18">
+            <span>Exposure</span>
+          </button>
+          <button class="preview-chip" data-img="assets/images/screenshot-decibel.jpg" data-name="Decibel Meter" data-tag="vDSP Acoustics">
+            <img src="assets/images/icon-decibel.png" alt="" width="18" height="18">
+            <span>Decibel</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architectural Pillars / Engineering Foundations -->
+  <section class="section engineering-section" id="engineering">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Engineering Discipline</div>
+        <h2 class="section-title">Architected for Extreme Reliability</h2>
+        <p class="section-desc">
+          We treat application development as systems engineering. High-performance native code running directly on Apple hardware, free from web runtimes and cloud vulnerabilities.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Native Swift 6 &amp; Hardware Acceleration</h3>
+          <p>
+            Zero web views or multi-platform bloat. We build 100% in modern Swift with strict concurrency checking, SwiftUI reactive state management, and Metal-accelerated graphics ensuring fluid 120Hz ProMotion interaction.
+          </p>
+          <div class="tech-tags">
+            <span>Swift 6</span>
+            <span>SwiftUI</span>
+            <span>Metal</span>
+            <span>Zero GC Stutter</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3>Apple Neural Engine &amp; Vision Pipelines</h3>
+          <p>
+            Machine learning models (Vision segmentation, optical OCR, on-device Speech transcription) run exclusively on the local Apple Neural Engine. Your photos, voice, and documents never leave device memory.
+          </p>
+          <div class="tech-tags">
+            <span>CoreML</span>
+            <span>Vision Framework</span>
+            <span>Speech APIs</span>
+            <span>Local Inference</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+          </div>
+          <h3>Low-Level Signal Processing &amp; Audio Graphs</h3>
+          <p>
+            Direct integration with <code>AVAudioEngine</code> and Accelerate vDSP. Our metronome features sample-accurate timing (±1 sample precision), while our sound meters compute calibrated FFT spectral weighting in real time.
+          </p>
+          <div class="tech-tags">
+            <span>AVAudioEngine</span>
+            <span>vDSP FFT</span>
+            <span>CoreHaptics</span>
+            <span>Sample-Exact</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3>Zero-Knowledge Privacy Standard</h3>
+          <p>
+            We implement no third-party telemetry, no analytics SDKs, and no tracking identifiers. In the Apple App Store, our official Privacy Nutrition Label reads <strong>"Data Not Collected"</strong>.
+          </p>
+          <div class="tech-tags">
+            <span>No Trackers</span>
+            <span>Offline-First</span>
+            <span>No Cloud DB</span>
+            <span>Data Not Collected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spotlight Flagship: Plant Light Meter (6813500465) -->
+  <section class="section flagship-section" id="flagship">
+    <div class="container">
+      <div class="spotlight-card">
+        <div class="spotlight-content">
+          <div class="badge-pill">
+            <span class="badge-indicator"></span>
+            <span>Featured Production Release · ASC ID 6813500465</span>
+          </div>
+          
+          <div class="app-identity">
+            <img src="assets/images/icon-plantlight.png" alt="Plant Light Meter Icon" class="app-icon-large">
+            <div>
+              <h2 class="app-title-featured">Plant Light Meter: Lux &amp; DLI</h2>
+              <p class="app-subtitle-featured">Photometric Exposure Analysis for Indoor Horticulture</p>
+              <div class="app-meta-tags">
+                <span class="meta-tag">iOS 17+ &amp; iPadOS</span>
+                <span class="meta-tag">Universal Binary</span>
+                <span class="meta-tag highlight">Privacy Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="spotlight-narrative">
+            Rather than requiring costly dedicated quantum flux meters, Plant Light Meter accesses calibrated camera exposure values (aperture, ISO, exposure time) in real time to calculate ambient illuminance in Lux and Daily Light Integral (DLI, mol/m²/day).
+          </p>
+
+          <div class="spec-matrix">
+            <div class="spec-box">
+              <span class="spec-label">Optical Processing</span>
+              <span class="spec-val">Real-time Lux &amp; Foot-Candles</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">DLI Calculation</span>
+              <span class="spec-val">Sunlight &amp; LED Grow Lighting</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">Species Taxonomy</span>
+              <span class="spec-val">100+ Houseplants Categorized</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">Data Storage</span>
+              <span class="spec-val">100% Local SwiftData (No Cloud)</span>
+            </div>
+          </div>
+
+          <div class="spotlight-actions">
+            <a href="https://apps.apple.com/app/id6813500465" target="_blank" rel="noopener" class="app-store-badge">
+              <svg viewBox="0 0 170 170" width="26" height="26" fill="currentColor">
+                <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.03-7.61-7.79-11.73-14.28-5.46-8.59-9.84-18.49-13.14-29.7-3.3-11.21-4.96-22.18-4.96-32.92 0-14.73 3.65-27.18 10.95-37.34 7.3-10.16 16.59-15.34 27.87-15.54 4.58 0 9.87 1.25 15.87 3.75 6 2.5 10.23 3.75 12.69 3.75 2.01 0 6.33-1.3 12.95-3.9 6.62-2.6 12.18-3.79 16.68-3.56 12.44.62 22.48 5.48 30.12 14.58-10.88 6.57-16.21 15.75-15.99 27.53.22 9.17 3.76 16.94 10.63 23.32 6.87 6.38 15.11 10.02 24.72 10.91-2.24 6.74-4.8 13.31-7.68 19.71zM119.22 33.15c0-7.3 2.66-14.33 7.98-21.09 5.32-6.76 12.04-11.23 20.16-13.41.45 2.12.68 4.19.68 6.21 0 7.3-2.73 14.27-8.19 20.91-5.46 6.64-12.28 11.02-20.46 13.14-.11-1.9-.17-3.82-.17-5.76z"/>
+              </svg>
+              <div class="badge-text">
+                <span class="badge-sup">Download on the</span>
+                <span class="badge-sub">App Store</span>
+              </div>
+            </a>
+            <a href="support.html#plantlight" class="btn btn-outline">
+              <span>Technical FAQ &amp; Manual</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="spotlight-visual">
+          <div class="spotlight-frame">
+            <img src="assets/images/screenshot-plantlight.jpg" alt="Plant Light Meter Screenshot" class="spotlight-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Software Portfolio Grid -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">TestSoft Lab Directory</div>
+        <h2 class="section-title">Production Software Instruments</h2>
+        <p class="section-desc">
+          Every tool in our suite is developed to solve a defined engineering or everyday problem with maximum speed, zero cognitive friction, and rigorous privacy guarantees.
+        </p>
+      </div>
+
+      <!-- Domain Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Instruments (16)</button>
+        <button class="filter-btn" data-filter="optical">Optical &amp; Vision</button>
+        <button class="filter-btn" data-filter="audio">Acoustics &amp; Audio</button>
+        <button class="filter-btn" data-filter="media">Media &amp; Creator</button>
+        <button class="filter-btn" data-filter="finance">Finance &amp; Math</button>
+        <button class="filter-btn" data-filter="study">Science &amp; Utility</button>
+      </div>
+
+      <!-- Apps Grid (16 Production Instruments) -->
+      <div class="apps-grid" id="apps-grid">
+
+        <!-- 1. Plant Light Meter -->
+        <div class="app-card" data-category="optical" data-appid="6813500465"
+             data-name="Plant Light Meter" data-tagline="Lux &amp; DLI measurement for houseplants"
+             data-tech="AVFoundation Photometry · SwiftData" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-plantlight.jpg" data-icon="assets/images/icon-plantlight.png"
+             data-desc="Real-time optical exposure measurement translating camera sensor flux to Lux and Daily Light Integral (DLI). Matches readings with 100+ plant care profiles. Zero photos stored.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-plantlight.png" alt="Plant Light Meter" class="app-card-icon">
+            <span class="subsystem-badge">AVFoundation Photometry</span>
+          </div>
+          <h3 class="app-card-title">Plant Light Meter</h3>
+          <p class="app-card-tagline">Lux &amp; DLI measurement for houseplants</p>
+          <p class="app-card-desc">
+            Translates sensor shutter/ISO parameters to Lux and Daily Light Integral (DLI) for indoor plants.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 2. Linecast Teleprompter -->
+        <div class="app-card" data-category="media" data-appid="6818072503"
+             data-name="Linecast: Teleprompter" data-tagline="Acoustic voice-synced script scrolling"
+             data-tech="Apple Speech Neural Engine · 4K 60FPS Video" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-linecast.jpg" data-icon="assets/images/icon-linecast.png"
+             data-desc="Automated script pacing driven by on-device neural speech recognition. Tracks speaker cadence without remotes, pedals, or preset timers. Video recorded in native 4K with Swift 6 actor isolation.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-linecast.png" alt="Linecast Teleprompter" class="app-card-icon">
+            <span class="subsystem-badge">Speech Neural Engine</span>
+          </div>
+          <h3 class="app-card-title">Linecast: Teleprompter</h3>
+          <p class="app-card-tagline">Voice-synced script scrolling &amp; video recording</p>
+          <p class="app-card-desc">
+            Hands-free script scrolling that moves in real time as you speak. Built-in 4K camera capture.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 3. Beatwise Metronome -->
+        <div class="app-card" data-category="audio" data-appid="6818116292"
+             data-name="Beatwise: Metronome" data-tagline="Sample-accurate timing engine for musicians"
+             data-tech="AVAudioEngine · Sample-Exact Scheduling" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-beatwise.jpg" data-icon="assets/images/icon-beatwise.png"
+             data-desc="Engineered directly on low-level AVAudioEngine buffers with ±1 sample clock precision. Completely avoids timer thread jitter. Polyrhythm generators and CoreHaptics tactile clicks.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-beatwise.png" alt="Beatwise Metronome" class="app-card-icon">
+            <span class="subsystem-badge">AVAudioEngine DSP</span>
+          </div>
+          <h3 class="app-card-title">Beatwise: Metronome</h3>
+          <p class="app-card-tagline">Sample-accurate timing for musicians</p>
+          <p class="app-card-desc">
+            ±1 sample clock precision scheduled at the audio buffer level. Zero drift over hours of playback.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 4. Image Compressor Offline -->
+        <div class="app-card" data-category="media" data-appid="6809712699"
+             data-name="Image Compressor Offline" data-tagline="High-throughput on-device image encoding"
+             data-tech="CoreImage · ImageIO Hardware Decoders" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-imagecompressor.jpg" data-icon="assets/images/icon-imagecompressor.png"
+             data-desc="Lossless and visually-lossless photo compression reducing payload by up to 90%. Streaming chunk processing guarantees memory safety even with 48MP ProRAW photos. Works 100% in Airplane Mode.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-imagecompressor.png" alt="Image Compressor" class="app-card-icon">
+            <span class="subsystem-badge">CoreImage / ImageIO</span>
+          </div>
+          <h3 class="app-card-title">Image Compressor Offline</h3>
+          <p class="app-card-tagline">On-device photo file size reduction</p>
+          <p class="app-card-desc">
+            Hardware-accelerated local photo compression. Zero cloud upload, zero data leakage.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 5. Exposure: Film Light Meter -->
+        <div class="app-card" data-category="optical" data-appid="6817941289"
+             data-name="Exposure: Film Light Meter" data-tagline="Photometric analog film exposure computer"
+             data-tech="AVFoundation Bias · Reciprocity Curve Solvers" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-exposure.jpg" data-icon="assets/images/icon-exposure.png"
+             data-desc="Precision spot and ambient metering for 35mm and medium format film photographers. Features calibrated Schwarzschild reciprocity failure compensation curves for Ilford and Kodak emulsions.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-exposure.png" alt="Exposure Meter" class="app-card-icon">
+            <span class="subsystem-badge">Logarithmic Optics</span>
+          </div>
+          <h3 class="app-card-title">Exposure: Film Light Meter</h3>
+          <p class="app-card-tagline">Spot metering &amp; reciprocity curves</p>
+          <p class="app-card-desc">
+            Calculates exact shutter/aperture pairs with emulsion reciprocity failure tables for analog film.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 6. Decibel Meter -->
+        <div class="app-card" data-category="audio" data-appid="6815980284"
+             data-name="Decibel Meter - Sound Level" data-tagline="Real-time acoustic SPL &amp; FFT spectrum analyzer"
+             data-tech="vDSP Accelerate · dBA/dBC Weighting" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-decibel.jpg" data-icon="assets/images/icon-decibel.png"
+             data-desc="Digital acoustical analyzer measuring Sound Pressure Level (SPL) with standard dBA and dBC weighting curves. Real-time fast Fourier transform (FFT) powered by Apple Accelerate framework.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-decibel.png" alt="Decibel Meter" class="app-card-icon">
+            <span class="subsystem-badge">Accelerate vDSP</span>
+          </div>
+          <h3 class="app-card-title">Decibel Meter: Sound Level</h3>
+          <p class="app-card-tagline">Real-time dBA/dBC noise level measurement</p>
+          <p class="app-card-desc">
+            Acoustic analyzer with dBA/dBC filters and peak/average decibel metering via local microphone.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 7. Cutout: Product Photo Backdrop -->
+        <div class="app-card" data-category="optical media" data-appid="6817633508"
+             data-name="Cutout: Backdrop Studio" data-tagline="On-device neural subject segmentation"
+             data-tech="Vision Foreground Instance Mask · CoreML" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-cutout.jpg" data-icon="assets/images/icon-cutout.png"
+             data-desc="High-precision foreground segmentation for ecommerce products and portraits. Uses Apple's Neural Engine to isolate edges cleanly down to the sub-pixel level in under 150ms.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-cutout.png" alt="Cutout" class="app-card-icon">
+            <span class="subsystem-badge">Vision Neural Mask</span>
+          </div>
+          <h3 class="app-card-title">Cutout: Photo Backdrop</h3>
+          <p class="app-card-tagline">Instant studio background removal</p>
+          <p class="app-card-desc">
+            On-device neural subject segmentation for product photography. Zero cloud upload required.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 8. EXIF Remover & Photo Metadata -->
+        <div class="app-card" data-category="optical" data-appid="6813939647"
+             data-name="EXIF Remover &amp; Metadata" data-tagline="GPS &amp; sensor metadata inspector and scrubber"
+             data-tech="ImageIO CGImageSource · Zero-Leak Copy" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-exifremover.jpg" data-icon="assets/images/icon-exifremover.png"
+             data-desc="Inspects full EXIF, TIFF, and GPS metadata trees embedded in photos. Strips all geolocation coordinates, serial numbers, and capture timestamps before sending to third parties.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-exifremover.png" alt="EXIF Remover" class="app-card-icon">
+            <span class="subsystem-badge">ImageIO Inspection</span>
+          </div>
+          <h3 class="app-card-title">EXIF Remover &amp; Metadata</h3>
+          <p class="app-card-tagline">Inspect &amp; strip sensitive photo metadata</p>
+          <p class="app-card-desc">
+            Inspect embedded GPS, camera serials, and timestamps. Strip privacy tags with one tap.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 9. Voice to Text: On-Device Recorder -->
+        <div class="app-card" data-category="audio media" data-appid="6817453669"
+             data-name="Voice to Text: Recorder" data-tagline="Confidential on-device audio transcription"
+             data-tech="Apple Local Speech Engine · AVFoundation" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-voicetext.jpg" data-icon="assets/images/icon-voicetext.png"
+             data-desc="Voice recorder with instant speech-to-text transcript generation. Engineered for medical, legal, and confidential meetings where audio must never touch external third-party cloud servers.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-voicetext.png" alt="Voice to Text" class="app-card-icon">
+            <span class="subsystem-badge">Local Speech Model</span>
+          </div>
+          <h3 class="app-card-title">Voice to Text: Recorder</h3>
+          <p class="app-card-tagline">Private on-device voice transcription</p>
+          <p class="app-card-desc">
+            Dictation and meeting recorder with local neural transcription. Never transmits voice data.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 10. Receipt Scanner: Scan to CSV -->
+        <div class="app-card" data-category="finance" data-appid="6817632852"
+             data-name="Receipt Scanner: Scan to CSV" data-tagline="Vision OCR expense ledger generator"
+             data-tech="VNRecognizeTextRequest · Heuristic Parser" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-receipts.jpg" data-icon="assets/images/icon-receipts.png"
+             data-desc="Extracts merchant names, dates, line items, and totals from paper receipts using on-device neural text recognition. Exports directly to standardized CSV for accounting.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-receipts.png" alt="Receipt Scanner" class="app-card-icon">
+            <span class="subsystem-badge">Vision Text OCR</span>
+          </div>
+          <h3 class="app-card-title">Receipt Scanner: To CSV</h3>
+          <p class="app-card-tagline">On-device receipt parsing &amp; CSV export</p>
+          <p class="app-card-desc">
+            Scans paper receipts, parses dates and totals via local OCR, and outputs accounting-ready CSV.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 11. Tilgungsplan: Loan Calculator -->
+        <div class="app-card" data-category="finance" data-appid="6813340450"
+             data-name="Tilgungsplan: Loan Calculator" data-tagline="High-precision loan amortization modeling"
+             data-tech="Decimal Arithmetic · Payoff Simulation" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-loancalculator.jpg" data-icon="assets/images/icon-loancalculator.png"
+             data-desc="Financial modeling for mortgages and commercial loans. Accurately calculates interest savings from unscheduled extra payments (Sondertilgung) with exact bank-grade rounding.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-loancalculator.png" alt="Loan Calculator" class="app-card-icon">
+            <span class="subsystem-badge">Financial Math</span>
+          </div>
+          <h3 class="app-card-title">Tilgungsplan: Loan Calc</h3>
+          <p class="app-card-tagline">Mortgage amortization &amp; overpayment</p>
+          <p class="app-card-desc">
+            Exact mathematical schedule for loans, interest rate shifts, and early payoff simulations.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 12. Dart Counter: 501 Scoreboard -->
+        <div class="app-card" data-category="study" data-appid="6814900164"
+             data-name="Dart Counter: 501 Scoreboard" data-tagline="Optimal checkout combinatorics &amp; stats"
+             data-tech="Graph Checkout Search · Match Stats" data-price="Free + $4.99 Lifetime"
+             data-img="assets/images/screenshot-darts.jpg" data-icon="assets/images/icon-darts.png"
+             data-desc="Tournament scoreboard for 301 and 501 darts matches. Evaluates optimal multi-dart checkout combinations in real time with automatic bust prevention and live 3-dart averages.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-darts.png" alt="Dart Counter" class="app-card-icon">
+            <span class="subsystem-badge">Combinatorics Engine</span>
+          </div>
+          <h3 class="app-card-title">Dart Counter: 501 Match</h3>
+          <p class="app-card-tagline">Dart-by-dart scorekeeper &amp; checkout routes</p>
+          <p class="app-card-desc">
+            Calculates smart checkout finishes, busts, and leg averages for competitive darts play.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $4.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 13. Elements: Periodic Table Quiz -->
+        <div class="app-card" data-category="study" data-appid="6813200026"
+             data-name="Elements: Periodic Table" data-tagline="Interactive atomic physics &amp; chemistry"
+             data-tech="Vector Bohr Models · Spaced Repetition" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-periodictable.jpg" data-icon="assets/images/icon-periodictable.png"
+             data-desc="Comprehensive chemical reference covering all 118 elements: atomic numbers, electron orbitals, electronegativity, and decay modes. Features spaced-repetition quiz algorithms.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-periodictable.png" alt="Periodic Table" class="app-card-icon">
+            <span class="subsystem-badge">Chemical Database</span>
+          </div>
+          <h3 class="app-card-title">Elements: Periodic Table</h3>
+          <p class="app-card-tagline">Interactive 118 element guide &amp; quiz</p>
+          <p class="app-card-desc">
+            Master atomic numbers, electron structures, and periodic groups with Leitner algorithms.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 14. Hanja 1800: Character Study -->
+        <div class="app-card" data-category="study" data-appid="6817877264"
+             data-name="Hanja 1800: Study Guide" data-tagline="Korean fundamental Hanja characters"
+             data-tech="Unihan Verification · Vector Canvas" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-hanja.jpg" data-icon="assets/images/icon-hanja.png"
+             data-desc="Curated study instrument covering the Ministry of Education's 1,800 fundamental Hanja characters. Verified against the Unicode Unihan database with interactive stroke writing.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-hanja.png" alt="Hanja 1800" class="app-card-icon">
+            <span class="subsystem-badge">Unihan Vector DB</span>
+          </div>
+          <h3 class="app-card-title">Hanja 1800: Study Guide</h3>
+          <p class="app-card-tagline">Ministry of Education 1800 characters</p>
+          <p class="app-card-desc">
+            Spaced-repetition character study with verified stroke orders and phonetic pronunciation.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 15. Subscriptions: Renewal Tracker -->
+        <div class="app-card" data-category="finance" data-appid="6817467638"
+             data-name="Subscriptions Tracker" data-tagline="Recurring expense forecasting"
+             data-tech="Local Notification · Cashflow Projection" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-receipts.jpg" data-icon="assets/images/icon-subscriptions.png"
+             data-desc="Audits recurring monthly/annual service commitments. Projects upcoming billing dates and annualized expenditures without requesting bank credentials or cloud account access.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-subscriptions.png" alt="Subscriptions" class="app-card-icon">
+            <span class="subsystem-badge">Cashflow Engine</span>
+          </div>
+          <h3 class="app-card-title">Subscriptions: Tracker</h3>
+          <p class="app-card-tagline">Recurring service audit &amp; renewal alerts</p>
+          <p class="app-card-desc">
+            Projects annual recurring costs and sends renewal notifications completely offline.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+        <!-- 16. Row Counter: Knit & Crochet -->
+        <div class="app-card" data-category="study" data-appid="6813451045"
+             data-name="Row Counter: Knit &amp; Crochet" data-tagline="Tactile multi-pattern tally instrument"
+             data-tech="CoreHaptics · Multitask State Machine" data-price="Free + $3.99 Lifetime"
+             data-img="assets/images/screenshot-plantlight.jpg" data-icon="assets/images/icon-rowcounter.png"
+             data-desc="Specialized tally counter for fiber artists and crafters. Features oversized touch targets, pattern repeat counters, and distinct CoreHaptics waveforms for blind finger-tap increments.">
+          <div class="app-card-header">
+            <img src="assets/images/icon-rowcounter.png" alt="Row Counter" class="app-card-icon">
+            <span class="subsystem-badge">CoreHaptics State</span>
+          </div>
+          <h3 class="app-card-title">Row Counter: Knit &amp; Tally</h3>
+          <p class="app-card-tagline">Tactile stitch &amp; pattern repeat counter</p>
+          <p class="app-card-desc">
+            Oversized tactile tap targets with customizable haptic confirmations for makers.
+          </p>
+          <div class="app-card-footer">
+            <span class="price-pill">Free + $3.99 Lifetime</span>
+            <button class="btn-inspect">Inspect Specs →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Standards & QA Pipeline -->
+  <section class="section standards-section" id="standards">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Engineering Quality Assurance</div>
+        <h2 class="section-title">The TestSoft Delivery Pipeline</h2>
+        <p class="section-desc">
+          Automated verification from first commit to App Store distribution. We ship with enterprise-grade testing gates.
+        </p>
+      </div>
+
+      <div class="pipeline-flow">
+        <div class="pipeline-step">
+          <div class="step-num">01</div>
+          <h4>Strict Concurrency &amp; Units</h4>
+          <p>Swift 6 complete concurrency checking, isolating mutable state to actors. Every algorithm verified with XCTest unit suites.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">02</div>
+          <h4>On-Device Hardware Smoke Tests</h4>
+          <p>Automated UI testing passes run on physical Apple Silicon testbeds (iPad Pro M4, iPhone 16) ensuring zero frame drops or memory leaks.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">03</div>
+          <h4>13-Locale Localization Gate</h4>
+          <p>Metadata, screenshots, and in-app strings validated in 13 languages (DE, FR, ES, JA, KO, IT, NL, PT-BR, TR, etc.) with automated naming audits.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">04</div>
+          <h4>Fastlane Continuous Delivery</h4>
+          <p>Reproducible build binaries, StoreKit 2 receipt validation, and App Store Connect API delivery pipelines executed without manual intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Inquiry & Contact -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-info">
+          <div class="section-tag">Commercial &amp; Technical Inquiries</div>
+          <h2 class="contact-heading">Connect with TestSoft Lab</h2>
+          <p class="contact-sub">
+            We partner with organizations requiring specialized Apple platform engineering, high-efficiency algorithm development, or custom enterprise licensing for our utility suite.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="detail-icon">✉</div>
+              <div>
+                <span class="detail-label">Direct Engineering Desk</span>
+                <a href="mailto:hayriodabas@testsoftlab.com" class="detail-value">hayriodabas@testsoftlab.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="detail-icon">🏢</div>
+              <div>
+                <span class="detail-label">Principal Engineer &amp; Founder</span>
+                <span class="detail-value">Hayri Odabaş</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="detail-icon">🌐</div>
+              <div>
+                <span class="detail-label">Production Domain</span>
+                <span class="detail-value">https://testsoftlab.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-action-box">
+          <h3 class="action-box-title">Initiate an Engineering Discussion</h3>
+          <p class="action-box-text">Select your topic to compose a message directly to our engineering desk.</p>
+          
+          <div class="form-group">
+            <label for="contact-topic">Subject Area</label>
+            <select id="contact-topic" class="form-input">
+              <option value="Enterprise / Volume Licensing">Enterprise / Volume Licensing for TestSoft Apps</option>
+              <option value="Plant Light Meter Support">Plant Light Meter: Lux &amp; DLI Inquiries</option>
+              <option value="Linecast Teleprompter Integration">Linecast Teleprompter Support</option>
+              <option value="Custom iOS Engineering Contract">Custom iOS / Apple Silicon Engineering Collaboration</option>
+              <option value="Security & Privacy Inquiries">Security &amp; Privacy Verification</option>
+            </select>
+          </div>
+
+          <a id="email-compose-btn" href="mailto:hayriodabas@testsoftlab.com?subject=Inquiry%20regarding%20Enterprise%20Licensing" class="btn btn-primary btn-block">
+            <span>Send Email to hayriodabas@testsoftlab.com</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </a>
+          <p class="action-box-note">Direct reply from Hayri Odabaş within 24 business hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Inspector Modal (Technical Spec Sheet) -->
+  <div class="modal-overlay" id="app-modal">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="modal-close">&times;</button>
+      <div class="modal-header-section">
+        <img id="modal-app-icon" src="assets/images/icon-plantlight.png" alt="" class="modal-app-icon">
+        <div>
+          <div class="badge-pill" style="margin-bottom:6px;padding:3px 10px;">
+            <span id="modal-app-subsystem">AVFoundation Photometry</span>
+          </div>
+          <h3 id="modal-app-title">Plant Light Meter</h3>
+          <p id="modal-app-tagline" style="color:var(--text-muted);font-size:0.95rem;">Lux &amp; DLI measurement for houseplants</p>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <div class="modal-preview-col">
+          <img id="modal-app-screenshot" src="assets/images/screenshot-plantlight.jpg" alt="Screenshot" class="modal-screenshot">
+        </div>
+        <div class="modal-details-col">
+          <h4>Technical Architecture</h4>
+          <p id="modal-app-desc" style="color:var(--text-muted);line-height:1.6;margin-bottom:20px;">
+            Description goes here.
+          </p>
+
+          <div class="spec-matrix" style="grid-template-columns:1fr;gap:10px;margin-bottom:24px;">
+            <div class="spec-box">
+              <span class="spec-label">Subsystem &amp; Stack</span>
+              <span class="spec-val" id="modal-app-tech">Swift 6 · Native Framework</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">Commercial Model</span>
+              <span class="spec-val" id="modal-app-price">Free + Lifetime Unlock</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">Privacy Guarantee</span>
+              <span class="spec-val">100% On-Device · Zero Telemetry</span>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <a id="modal-store-btn" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+              <span>View on Apple App Store</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <span class="brand-name">TestSoft Lab</span>
+          </div>
+          <p class="footer-about">
+            High-integrity Apple systems and application engineering studio. Developing respectful on-device instruments for macOS, iOS, and iPadOS.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Instruments Directory</h4>
+          <a href="#flagship">Plant Light Meter</a>
+          <a href="#portfolio">Linecast Teleprompter</a>
+          <a href="#portfolio">Beatwise Metronome</a>
+          <a href="#portfolio">Exposure Film Meter</a>
+          <a href="#portfolio">Image Compressor</a>
+          <a href="#portfolio">Decibel Meter</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Governance &amp; Support</h4>
+          <a href="privacy.html">Privacy Policy (Data Not Collected)</a>
+          <a href="support.html">Technical Documentation &amp; FAQ</a>
+          <a href="mailto:hayriodabas@testsoftlab.com">Security &amp; Engineering Desk</a>
+          <a href="https://appstoreconnect.apple.com" target="_blank" rel="noopener">Apple Developer Portal</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 TestSoft Lab (Hayri Odabaş). All rights reserved.</p>
+        <p class="footer-disclaimer">
+          Apple, iPhone, iPad, iOS, iPadOS, Swift, and App Store are trademarks of Apple Inc., registered in the U.S. and other jurisdictions.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

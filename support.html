@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation &amp; Support — TestSoft Lab</title>
+  <meta name="description" content="Technical documentation, sensor calibration guides, and FAQ for TestSoft iOS software instruments.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/icon-plantlight.png">
+  <style>
+    .support-wrap {
+      max-width: 960px;
+      margin: 60px auto 100px;
+    }
+    .faq-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s;
+    }
+    .faq-block:hover {
+      border-color: var(--border-active);
+    }
+    .faq-block h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--accent-cyan);
+    }
+    .faq-block p, .faq-block li {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .faq-block ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .doc-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .doc-chip {
+      padding: 6px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .doc-chip:hover {
+      border-color: var(--accent-cyan);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">TestSoft<span class="brand-dot">Lab</span></span>
+          <span class="brand-sub">Apple Systems &amp; Apps</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#portfolio">All Instruments</a>
+        <a href="index.html#engineering">Architecture</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:hayriodabas@testsoftlab.com" class="btn btn-sm btn-outline">Contact Desk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container support-wrap">
+    <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+      <div class="section-tag">Engineering Manuals &amp; FAQ</div>
+      <h1 class="section-title">Technical Support &amp; Knowledge Base</h1>
+      <p class="section-desc">
+        Operational documentation, sensor calibration instructions, and direct engineering assistance for TestSoft applications.
+      </p>
+    </div>
+
+    <div class="doc-nav">
+      <a href="#storekit" class="doc-chip">License &amp; Purchases</a>
+      <a href="#plantlight" class="doc-chip">Plant Light Meter</a>
+      <a href="#linecast" class="doc-chip">Linecast Teleprompter</a>
+      <a href="#beatwise" class="doc-chip">Beatwise Metronome</a>
+      <a href="#exposure" class="doc-chip">Exposure Meter</a>
+      <a href="#decibel" class="doc-chip">Decibel Meter</a>
+      <a href="#imagecompressor" class="doc-chip">Image Compressor</a>
+    </div>
+
+    <!-- StoreKit Purchases -->
+    <div class="faq-block" id="storekit">
+      <h3>License Restoration &amp; StoreKit Purchases</h3>
+      <p>
+        <strong>How do I restore my lifetime purchase across new or multiple Apple devices?</strong>
+      </p>
+      <p>
+        All TestSoft pro unlocks are registered directly on Apple's StoreKit 2 infrastructure and bound to your Apple ID. We do not use proprietary accounts or licenses:
+      </p>
+      <ul>
+        <li>Launch the application on your iPhone, iPad, or Mac.</li>
+        <li>Open <strong>Settings</strong> (or tap the padlock icon in the menu bar).</li>
+        <li>Tap <strong>Restore Purchases</strong>.</li>
+        <li>Apple's cryptographic receipt validator will verify your lifetime entitlement instantly.</li>
+      </ul>
+    </div>
+
+    <!-- Plant Light Meter Guide -->
+    <div class="faq-block" id="plantlight">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-plantlight.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Plant Light Meter: Lux &amp; DLI Manual</h3>
+      </div>
+      <p><strong>Sensor Positioning &amp; Calibration:</strong></p>
+      <p>
+        Lay your device flat where your plant's foliage is positioned, with the front or rear lens oriented toward the primary illumination vector (window or luminaire). Allow 1-2 seconds for automatic exposure convergence.
+      </p>
+      <p><strong>Understanding DLI (Daily Light Integral):</strong></p>
+      <p>
+        Lux measures instantaneous luminous flux perceptible to human vision. DLI (expressed in mol/m²/day) measures cumulative photosynthetically active radiation (PAR) absorbed over 24 hours. Input your observed photoperiod (hours of light) to compute DLI for daylight or specialized LED spectra.
+      </p>
+      <p><strong>Zero-Retention Camera Stream:</strong></p>
+      <p>
+        The app samples camera hardware metadata (ISO, exposure duration, aperture) in memory. No photographic frames are ever written to disk or transmitted over any network socket.
+      </p>
+    </div>
+
+    <!-- Linecast Teleprompter Guide -->
+    <div class="faq-block" id="linecast">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-linecast.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Linecast: Voice-Synced Teleprompter</h3>
+      </div>
+      <p><strong>Speech Pacing Mechanics:</strong></p>
+      <p>
+        Linecast integrates Apple's local on-device Speech framework. As you speak, word boundaries are matched in real time against your script, scrolling the canvas smoothly at your natural speaking cadence. If you pause, the prompter pauses.
+      </p>
+      <p><strong>Hardware Concurrency:</strong></p>
+      <p>
+        Video capture runs in a dedicated AVFoundation actor pipeline, ensuring 4K 60FPS video recording never stutters while speech recognition executes concurrently on the Neural Engine.
+      </p>
+    </div>
+
+    <!-- Beatwise Metronome Guide -->
+    <div class="faq-block" id="beatwise">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-beatwise.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Beatwise: Sample-Accurate Timing Engine</h3>
+      </div>
+      <p><strong>Buffer-Level Clock Scheduling:</strong></p>
+      <p>
+        Most metronomes rely on software timers (like NSTimer or DispatchSource), which suffer from thread jitter and OS scheduling delays. Beatwise calculates click positions directly within the <code>AVAudioEngine</code> render graph, guaranteeing exact ±1 sample alignment (sub-millisecond precision).
+      </p>
+    </div>
+
+    <!-- Exposure Meter Guide -->
+    <div class="faq-block" id="exposure">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-exposure.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Exposure: Film Photometry &amp; Reciprocity Failure</h3>
+      </div>
+      <p><strong>Reciprocity Failure Calculations:</strong></p>
+      <p>
+        When shooting analog film at exposures longer than 1 second, silver halide emulsions experience reciprocity failure (the Schwarzschild effect). Exposure includes verified empirical compensation equations for Ilford (HP5+, FP4+, Delta) and Kodak (Tri-X, T-Max, Portra) stocks.
+      </p>
+    </div>
+
+    <!-- Decibel Meter Guide -->
+    <div class="faq-block" id="decibel">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-decibel.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Decibel Meter: Acoustic Weighting &amp; Calibration</h3>
+      </div>
+      <p><strong>dBA vs. dBC Weighting Curves:</strong></p>
+      <p>
+        dBA mimics the human ear's sensitivity to low-to-moderate sound levels by attenuating frequencies below 1 kHz. dBC provides a flatter response across the audible spectrum, ideal for measuring bass and industrial machinery.
+      </p>
+    </div>
+
+    <!-- Image Compressor Guide -->
+    <div class="faq-block" id="imagecompressor">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <img src="assets/images/icon-imagecompressor.png" alt="" width="36" height="36" style="border-radius:8px;">
+        <h3 style="margin:0;">Image Compressor Offline</h3>
+      </div>
+      <p><strong>Hardware Pipeline:</strong></p>
+      <p>
+        Utilizes Apple Silicon's hardware JPEG/HEIF image encoding blocks via CoreImage and ImageIO. All memory buffers are strictly bounded to prevent iOS memory warnings when processing multi-megabyte ProRAW photos.
+      </p>
+    </div>
+
+    <!-- Direct Support Form -->
+    <div class="contact-card" style="margin-top: 50px;">
+      <div>
+        <div class="section-tag">Direct Engineering Communication</div>
+        <h2 style="font-size: 1.8rem; margin-bottom: 12px;">Contact the Development Team</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">
+          For bug reports, custom calibration requests, or enterprise deployment questions, submit your inquiry directly to our engineering desk.
+        </p>
+        <p style="font-size: 1.05rem; font-weight: 600;">
+          Direct Email: <a href="mailto:hayriodabas@testsoftlab.com" style="color: var(--accent-cyan);">hayriodabas@testsoftlab.com</a>
+        </p>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;">
+        <a href="mailto:hayriodabas@testsoftlab.com?subject=Technical%20Support%20Request%20-%20TestSoft%20Lab" class="btn btn-primary">
+          <span>Open Email Client</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 TestSoft Lab (Hayri Odabaş). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
